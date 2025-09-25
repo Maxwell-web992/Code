@@ -1,96 +1,264 @@
+
 <!DOCTYPE html>
 <html lang="en">
+    
+
 <head>
+i    
+    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App!</title>
+   
     <style>
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: black; 
-            background-color: wheat;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9fdfd;
+            color: #333;
+            display: flex;
+        }
+
+
+        .navbar {
+            width: 50px;
+            height: 100vh;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+            position: fixed;
+            left: 0;
+            top: 0;
+            box-shadow: 3px 0 15px rgba(0, 0, 0, 0.08);
+            transition: width 0.3s ease;
+            overflow: hidden;
+            border-right: 1px solid #e6f7f6;
+        }
+
+        .navbar:hover {
+            width: 220px;
+        }
+
+        .navbar a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #555;
+            font-size: 1.1rem;
+            width: 85%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .navbar a i {
+            min-width: 40px;
+            text-align: center;
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a span {
+            opacity: 0;
+            transition: opacity 0.3s ease, margin-left 0.3s ease;
+            margin-left: 5px;
+        }
+
+        .navbar:hover a span {
+            opacity: 1;
+            margin-left: 10px;
+        }
+
+
+        .navbar a:hover {
+            background: #e6fcfa;
+            color: #34e0d5;
+            transform: translateX(5px);
+        }
+
+
+        .navbar a.active {
+            background: linear-gradient(135deg, #34e0d5, #1ca99f);
+            color: white;
+            box-shadow: 0 4px 12px rgba(52, 224, 213, 0.4);
+        }
+
+        .navbar a.active i {
+            transform: scale(1.2);
+        }
+
+
+        .divider {
+            width: 60%;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.1);
+            margin: 15px 0;
+        }
+
+
+        .main {
+            margin-left: 70px;
+            padding: 40px;
+            flex: 1;
+            transition: margin-left 0.3s ease;
+        }
+
+        .navbar:hover~.main {
+            margin-left: 230px;
+        }
+
+        .main h1 {
+            font-size: 2.3rem;
+            color: #34e0d5;
+            margin-bottom: 10px;
+        }
+
+        .main p {
+            font-size: 1.05rem;
+            max-width: 700px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+
+        .news {
+            background: #fff;
+            border-radius: 14px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #34e0d5;
+        }
+
+        .news p {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #34e0d5;
+            margin-bottom: 12px;
+        }
+
+        .news ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .news li {
+            padding: 8px 0;
+            font-size: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 50px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .footer a {
+            color: #34e0d5;
+            margin: 0 8px;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #1ca99f;
+            transform: scale(1.2);
         }
     </style>
-    <img src="globe-solid-full (1).svg" height="100" width="100">
-    
 </head>
+
 <body>
-    <style>
-    body{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:rgb(7, 206, 228);
-    
-    
-    
-    
-    }
-
-
-    button {
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-        background-color:rgb(8, 199, 243);
-
-        container-type: calc();
-      
-
-    }
-
-    
-
-
-
-    
-  
-
-    </style>
-    
-        <h1>
-            <center style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                Welcome To My Website
-            </center>
-        </h1>
-        <br>
-                  
-        <h3><marquee><center>Get premium for 30% off.</center></marquee></h3>
-        
-        <h3><center>Make websites</center></h3>
-        <h3><center>Edit videos</center></h3>
-        <h3><center>To get started click on go</center></h3>
-
-        <h3><center><button>Get premium</button></center></h3>
-        <h3><center><button>Get started!</button></center></h3>
-        <div class="navbar">
-            <div class="left">
-                <a herf"#">Home</a>
-                <a herf"#">About</a>
-                <a herf"#">Servises</a>
-                <a herf"#">Courses</a>
-                <a herf"#">Contact</a>
-            </div>
-            <div class="right">
-                <center<a herf"#">Registration</a>
-                <a herf"#">Login</a>
-            </div>
-        </div>
-        
-        <div class="content">
-                    <center><li>Premieum Subscription - exta 20% off</li></center>
-                    <center><li>Prittables avaliable</li></center>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="container">
-            <center>
-        
-                Site Designed and Maintained by Maxwell; in Maxwell&#169; 2025,
-                All Rights Reserved
-        
-            </center>
-        </div>
-        
-        
-
+        <h2>My sinformation</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Submit">
  
+
+    <div class="navbar">
+        <a href="#" class="active"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#"><i class="fas fa-user"></i><span>About</span></a>
+        <a href="#"><i class="fas fa-briefcase"></i><span>Services</span></a>
+        <a href="#"><i class="fas fa-book"></i><span>Courses</span></a>
+        <a href="#"><i class="fas fa-envelope"></i><span>Contact</span></a>
+        <div class="divider"></div>
+        <a href="#"><i class="fas fa-user-plus"></i><span>Register</span></a>
+        <a href="#"><i class="fas fa-sign-in-alt"></i><span>Login</span></a>
+    </div>
+
+
+    <div class="main">
+        <h1>Welcome to my app</h1>
+
+
+        <div class="news">
+            <p><i class="fas fa-bullhorn"></i> Latest Reports</p>
+            <ul>
+                <li>🔹You can make vidios.</li>
+                <li>🔹You can disgin apps.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <div>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                
+            </div>
+            <h1>The world</h1>
+            <p>
+                <div class="country">
+                    <h2>Japan</h2>
+                 <p>Japan is Kown becauce of it's rich culture and advanced tecnology, and buatiful cherry blossoms </p>
+                </div>
+                
+                
+                <div class="country">
+                    <h2>France</h2>
+                    <p>France is famous for its iconic landmarks like the Eiffel Tower and Louvre Museum, exquisite cuisine and fine
+                        wines, high-fashion haute couture and luxury brands, a rich heritage of art and literature, picturesque
+                        landscapes including the French Riviera and Alps, and its influential culture and lifestyle. It is also known
+                        for its historic châteaux, the French Revolution, and being the world's most visited country. </p>
+                        <h1>We provide stories</h1>
+                        <p>One sunny day, a big lion was sleeping in the jungle. A
+                            tiny mouse started running up and down on him just for fun.
+                            This woke the lion up. He caught the mouse with his big paw
+                            and was about to eat him.
+                            The scared mouse said, "Please let me go, Mr. lion! maybe
+                            one day, I can help you too." the lion laughed because he
+                            didn't think a litle mouse could ever help him. But he
+                            was in good mood, so he let the mouse go.
+                            later on,the lion got trapped in a net set by the hunters.He
+                            roared louldy becauce he coulden't get out. The litle mouse
+                            heard him and ran to help.She bit thought the net with her
+                            tiny, sharp teeth, and the lion was free,</p>
+
+                </div>
+                <center>Site Designed  by Maxwell Ltd. © 2025 - All Rights Reserved
+                    
+                </center>
+                
+            </p>
+        </div>
+    </div>
+
 </body>
+
 </html>
