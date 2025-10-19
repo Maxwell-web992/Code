@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b3d91;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    color: #ffcc00;
+}
+/* Attribute selector */
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+/*child selector*/
+ul > li > a{
+    font-weight: bold;
+}
+/*sibling selector*/
+h2 + p {
+    background-color: blue;
+    line-height: 1.6;
+    padding: 10px;
+
+}
+/*:hover pseudo-class*/
+a:hover {
+    color: #ffffff;
+    background-color: #ffcc00;
+}
+/*:nth-child pseudo-class*/
+ul li:nth-child(odd) {
+    background-color: #1a1a1a;
+}   
+/*:not(selector) pseudo-class*/
+p:not(.highlight) {
+    font-size: 16px;
+}   
+/*::before pseudo-element*/     
+h2::before {
+    content: "🚀";
+    font-weight: bold;
+   
+}
+/*::after pseudo-element*/
+a::after {
+    content: " 🌟";
+    font-weight: bold;
+}
+/*:first-letter pseudo-element*/
+p::first-letter {   
+    font-size: 200%;
+    font-weight: bold;
+    color: #ffcc00;
+}
