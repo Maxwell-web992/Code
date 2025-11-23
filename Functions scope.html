@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Scope</title>
+</head>
+<body>
+    <button type="button" onclick="myFunction()">Click me</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+
+        var b =5;
+        function myFunction() {
+           var a = 4;
+           document.getElementById("demo").innerHTML = a + b;
+
+        }
+        document.getElementById("demo1").innerHTML = b;
+          document.getElementById("demo1").innerHTML = a;
+        
+    </script>
+
+    
+</body>
+</html>
