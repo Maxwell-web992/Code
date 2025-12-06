@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <h1>Array Mixatron</h1>
+    <h3>Join() pop()</h3>
+    <p id="my1"></p>
+    <p id="my2"></p>
+    <p id="my3"></p>
+
+
+    <script>
+        var cars = ["Buggati", "Lamborghini", "Ferrari", "Porsche"];
+        document.getElementById("my1").innerHTML = cars.join(" * ");
+
+        document.getElementById("my2").innerHTML = cars;
+        cars.pop();
+        document.getElementById("my3").innerHTML = cars;
+    </script>
+
+</body>
+
+</html>
