@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arry Sort</title>
+</head>
+<body>
+    <h1>Array Sort</h1>
+    <button onclick="assendingorder()">Ascending Order</button>
+    <button onclick="descendingorder()">Descending Order</button>
+    <p id="result"></p>
+    <script>
+        var points = [40, 100, 1, 5, 25, 10];
+         document.getElementById("result").innerHTML =  points;
+        function assendingorder() {
+            points.sort(function(a, b){return a - b});
+            document.getElementById("result").innerHTML =  points;
+        }
+        function descendingorder() {
+            points.sort(function(a, b){return b - a});
+            document.getElementById("result").innerHTML =  points;
+        }
+        document.getElementById("result").innerHTML =  points;
+    </script>    
+</body>
+</html>
