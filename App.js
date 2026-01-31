@@ -4,7 +4,7 @@ class Customer extends React.Component {
 
   render() {
 
-    return <h2>I am from {this.props.city}!</h2>;
+    return <h2>Hello am Maxwell, am 9 years old and from {this.props.city}!</h2>;
 
   }
 
@@ -18,9 +18,9 @@ class Details extends React.Component {
 
       <div>
 
-        <h1>Hello</h1>
+        <h1>Hi!</h1>
 
-        <Customer city="Chennai" />
+        <Customer city="America" />
 
       </div>
 
