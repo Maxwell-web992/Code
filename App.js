@@ -1,33 +1,28 @@
-import React from 'react';
-
-class Customer extends React.Component {
-
-  render() {
-
-    return <h2>Hello am Maxwell, am 9 years old and from {this.props.city}!</h2>;
-
-  }
-
+import react  from 'react';
+class student extends react.Component {
+constructor(){
+super();
+this.state={
+name:"Maxwell",
+age:9,
+grade:4,
+favorite_color:"blue",
+favorite_sports:"soccer"
+};
 }
 
-class Details extends React.Component {
-
-  render() {
-
-    return (
-
-      <div>
-
-        <h1>Hi!</h1>
-
-        <Customer city="America" />
-
-      </div>
-
-    );
-
-  }
-
+render(){
+return(
+<div>
+  <h1>Student Information</h1>
+  <p>My name is {this.state.name}.</p>
+  <p>My grade is {this.state.grade}.</p>
+  <p>My favorite color is {this.state.favorite_color}.</p>
+  <p>My favorite sport is {this.state.favorite_sports}.</p>
+</div>
+);
+}
 }
 
-export default Details;
+
+export default student; 
