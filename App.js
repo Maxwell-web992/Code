@@ -1,28 +1,89 @@
-import react  from 'react';
-class student extends react.Component {
-constructor(){
-super();
-this.state={
-name:"Maxwell",
-age:9,
-grade:4,
-favorite_color:"blue",
-favorite_sports:"soccer"
-};
-}
+import React from "react";
 
-render(){
-return(
-<div>
-  <h1>Student Information</h1>
-  <p>My name is {this.state.name}.</p>
-  <p>My grade is {this.state.grade}.</p>
-  <p>My favorite color is {this.state.favorite_color}.</p>
-  <p>My favorite sport is {this.state.favorite_sports}.</p>
-</div>
-);
-}
-}
+import './index.css';
+class MyForm extends React.Component {
 
+  state = {
 
-export default student; 
+    result: 0
+
+  };
+
+  op1Ref = React.createRef();
+
+  op2Ref = React.createRef();
+
+  mysubmit = () => {
+
+    const op1 = Number(this.op1Ref.current.value);
+
+    const op2 = Number(this.op2Ref.current.value);
+
+    this.setState({
+
+      result: op1 * op2
+
+    });
+
+  };
+
+  render() {
+
+    return (
+
+      <form>
+
+        <div className="container">
+
+          <h1>Multiply</h1>
+
+          <div className="form-group">
+
+            <label>Enter Operand 1</label>
+
+            <input
+
+              type="number"
+
+              ref={this.op1Ref}
+
+              placeholder="Enter Operand 1"
+
+            />
+
+          </div>
+
+          <div className="form-group">
+
+            <label>Enter Operand 2</label>
+
+            <input
+
+              type="number"
+
+              ref={this.op2Ref}
+
+              placeholder="Enter Operand 2"
+
+            />
+
+          </div>
+
+          <p>Result: {this.state.result}</p>
+
+          <button type="button" className="btn" onClick={this.mysubmit}>
+
+            Multiply
+
+          </button>
+
+        </div>
+
+      </form>
+
+    );
+
+  }
+
+}
+export default MyForm;
